@@ -1,6 +1,6 @@
 #! /bin/bash
 IFS=$'\n'
-jvms=$(grep -v "#" images-builder/jvms.sh | awk -F ' ' '{print $1'})
+jvms=$(grep -v "#" jvms.sh | awk -F ' ' '{print $1'})
 
 user=chakibmed
 

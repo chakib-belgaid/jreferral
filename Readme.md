@@ -9,7 +9,20 @@ A tool that run your java program through multiple versions of JVMs and optimisa
 
 ## How to use 
 
-
+1. Choose your options in th file `jvms.sh` 
+    - uncomment what should be included during the tests
+2. run `build-images.sh` that will build the docker images for respective jvms 
+3. replace the word **java** with **./test.sh** in your command 
+    - example 
+        ``` 
+        java -jar example.jar arg1 arg2 ...
+        will be 
+        ./test.sh -jar example.jar arg1 arg2 ...
+        ```
+you will find the results in `data.csv` and the execution log in `exp.log`
 
 # TODO 
-- change the extension of jvms.sh 
+- [ ] add thepython script that print the choice 
+- [x] Change the extension of jvms.sh 
+- [ ] Custumize the username
+- [ ] Custiomize the data filename and logs filename 
