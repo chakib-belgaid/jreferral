@@ -1,4 +1,4 @@
-# 16.0.0.j9-adpt
+16.0.0.j9-adpt
 # 16.0.0.hs-adpt
 # 11.0.11.j9-adpt
 # 11.0.11.hs-adpt
@@ -9,7 +9,7 @@
 # 8.0.282.j9-adpt
 # 8.0.282.hs-adpt
 
-# 11.0.9.4-albba
+11.0.9.4-albba
 # 8.5.5-albba
 
 # 16.0.1.9.1-amzn
@@ -33,7 +33,7 @@
 # 7.0.292-zulu
 # 6.0.119-zulu
 
-# 16.0.1.fx-librca
+16.0.1.fx-librca
 # 16.0.1-librca
 # 16.0.0.fx-librca
 # 16.0.0-librca
@@ -45,7 +45,8 @@
 # 8.0.292-librca
 # 8.0.282.fx-librca
 # 8.0.282-librca
-# 21.1.0.r16-grl
+
+21.1.0.r16-grl
 # 21.1.0.r11-grl
 # 21.1.0.r8-grl
 # 21.0.0.2.r11-grl
@@ -58,16 +59,17 @@
 # 19.3.6.r8-grl
 # 19.3.5.r11-grl
 # 19.3.5.r8-grl
-# 17.ea.19-open
+
+17.ea.19-open
 # 17.ea.6.lm-open
 # 17.ea.2.pma-open
 
 16-open
 # 16.0.1-open
-# 11.0.11-open
+11.0.11-open
 # 11.0.10-open
 # 11.0.2-open
-# 8.0.292-open
+8.0.292-open
 # 8.0.282-open
 # 8.0.265-open
 # 21.0.0.0-mandrel
@@ -82,5 +84,5 @@
 # 11.0.9-trava
 # 8.0.232-trava
 
-# 11.0.11-open
+
 16-open -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler

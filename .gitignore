@@ -1,2 +1,4 @@
 src/scratch
 src/dacapo.jar
+exps/*
+.vscode

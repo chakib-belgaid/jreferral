@@ -22,7 +22,7 @@ A tool that run your java program through multiple versions of JVMs and optimisa
 you will find the results in `data.csv` and the execution log in `exp.log`
 
 # TODO 
-- [ ] add thepython script that print the choice 
+- [ ] add the python script that print the choice 
 - [x] Change the extension of jvms.sh 
-- [ ] Custumize the username
-- [ ] Custiomize the data filename and logs filename 
+- [x] Custumize the username
+- [x] Custiomize the data filename and logs filename 
