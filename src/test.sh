@@ -4,7 +4,9 @@ user="chakibmed"
 datafile="data.csv"
 logfile="exp.log"
 max_iterations=3
+sleep_duration=3
 s=""
+
 while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
     u)
@@ -54,11 +56,11 @@ measure() {
     IFS=$' '
 
     energies=$($curdir/measureit.sh -b -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $cmd)
-
+    exitcode=$?
     IFS=$'\n'
     ## write the results in a data file
     numbers=$(parse_energies $energies)
-    echo $tag';'$optionstag';'$iteration''$numbers >>$datafile
+    echo $tag';'$optionstag';'$iteration';'$exitcode''$numbers >>$datafile
 
 }
 
@@ -83,7 +85,7 @@ parse_energies() {
 }
 
 #intialisation of the log and data files
-echo "jvm;options;iteration;"$header >$datafile
+echo "jvm;options;iteration;exitcode;"$header >$datafile
 echo "" >$logfile
 
 #excuting the cmd
@@ -98,5 +100,6 @@ for i in $(seq 1 1 $max_iterations); do
             options="deafult"
         fi
         measure $i $tag $options $cmd
+        sleep $sleep_duration
     done
 done

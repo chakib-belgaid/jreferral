@@ -19,6 +19,8 @@ A tool that run your java program through multiple versions of JVMs and optimisa
         will be 
         ./test.sh -jar example.jar arg1 arg2 ...
         ```
+
+
 you will find the results in `data.csv` and the execution log in `exp.log`
 
 # TODO 
@@ -26,3 +28,5 @@ you will find the results in `data.csv` and the execution log in `exp.log`
 - [x] Change the extension of jvms.sh 
 - [x] Custumize the username
 - [x] Custiomize the data filename and logs filename 
+- [x] Loops inside the testing 
+- [ ] add the options in the descprition 

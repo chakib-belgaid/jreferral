@@ -5,6 +5,7 @@
 duration=5
 
 frequency=1
+exit_code=0
 while getopts "o:lbvnd:f:" o; do
     case "${o}" in
     v)
@@ -238,6 +239,7 @@ get_raw_energy() {
     else
         $@
     fi
+    exit_code=$?
     ###############################################
     endT=$(date +"%s%N")
     end_energy=$(read_energy)
@@ -277,6 +279,7 @@ else
     get_raw_energy $@
 fi
 
+exit $exit_code
 # totalsteps=$((duration * frequency))
 # step=$(echo $frequency | awk '{printf 1/$1}')
 # echo $step
