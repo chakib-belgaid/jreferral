@@ -1,4 +1,4 @@
-# JVM-Selctor 
+# JVM-Recommander  
 A tool that run your java program through multiple versions of JVMs and optimisation options to rcommend the most energry efficiant configuration 
 
 ## Requirements 
