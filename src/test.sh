@@ -3,9 +3,10 @@
 user="chakibmed"
 datafile="data.csv"
 logfile="exp.log"
-max_iterations=3
-sleep_duration=3
+max_iterations=1
+sleep_duration=1
 s=""
+opt_dec=0;
 
 while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
@@ -22,12 +23,11 @@ while getopts "u:d:l:n:" o >/dev/null 2>&1; do
         max_iterations=${OPTARG}
         ;;
     *)
-        OPTIND=$((OPTIND - 1))
+        opt_dec=$((opt_dec + 1))
         ;;
     esac
-
 done
-shift $OPTIND
+shift $((OPTIND - 1 + opt_dec ))
 
 curdir="$(dirname -- $(
     readlink -fn -- "$0"

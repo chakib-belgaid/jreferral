@@ -5,7 +5,6 @@
 duration=5
 
 frequency=1
-exit_code=0
 while getopts "o:lbvnd:f:" o; do
     case "${o}" in
     v)
@@ -236,10 +235,11 @@ get_raw_energy() {
     if [ -n $outputfile ]; then
 
         $@ 2>&1 >>$outputfile
+        exit_code=$?
     else
         $@
+        exit_code=$?
     fi
-    exit_code=$?
     ###############################################
     endT=$(date +"%s%N")
     end_energy=$(read_energy)
@@ -268,6 +268,7 @@ get_raw_energy() {
             print_details $energies
         fi
     fi
+    return $exit_code 
 }
 ###############################
 maxenergies=$(read_maxenergy)
@@ -277,6 +278,7 @@ if [ -n "$list_dom" ]; then
     list_global_domains $maxenergies
 else
     get_raw_energy $@
+    exit_code=$?
 fi
 
 exit $exit_code
