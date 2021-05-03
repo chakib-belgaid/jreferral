@@ -1,13 +1,15 @@
 #! /bin/bash
 
-user="chakibmed"
-datafile="data.csv"
-logfile="exp.log"
-max_iterations=1
-sleep_duration=1
-s=""
-opt_dec=0
+compile_cmd="numericalintegration.java"
+execute_cmd="NumericalIntegration"
 
+user="chakibmed"
+datafile="data_numericalintegration_chetemi_15_single.csv"
+logfile="exp_numericalintegration_chetemi_15_single.log"
+max_iterations=30
+sleep_duration=2
+
+opt_dec=0
 while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
     u)
@@ -38,6 +40,11 @@ IFS=$'\n'                           # retrieve the whole line and ignore spaces
 jvms=$(grep -v "#" $curdir/jvms.sh) # get the available jvm configurations
 header=$($curdir/measureit.sh -l)   # get the avialable domaines
 
+compile() {
+    rm *.class
+    docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/javac -v$(pwd):/lab -w /lab $user/jvm:$tag $compile_cmd
+}
+
 measure() {
 
     iteration=$1
@@ -55,7 +62,7 @@ measure() {
     echo -------$tag----$iteration---$optionstag--- >>$logfile
     IFS=$' '
 
-    energies=$($curdir/measureit.sh -b -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $cmd)
+    energies=$($curdir/measureit.sh -b -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $execute_cmd)
     exitcode=$?
     IFS=$'\n'
     ## write the results in a data file
@@ -99,9 +106,8 @@ for i in $(seq 1 1 $max_iterations); do
         if [ -z $options ]; then
             options="deafult"
         fi
+        # compile $i $tag $options $cmd
         measure $i $tag $options $cmd
         sleep $sleep_duration
     done
 done
-
-python3 recap.py $datafile

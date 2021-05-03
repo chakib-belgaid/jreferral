@@ -99,7 +99,7 @@ calculate_energy() {
         x = energiesends[i] - energiesbegins[i]
         if (x < 0 )
             {
-                x=x+datamaxenergies[i]
+                x=x+energiesmax[i]
             }
         printf i","names[i]","x";" 
         }
@@ -268,7 +268,7 @@ get_raw_energy() {
             print_details $energies
         fi
     fi
-    return $exit_code 
+    return $exit_code
 }
 ###############################
 maxenergies=$(read_maxenergy)
