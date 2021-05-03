@@ -104,4 +104,4 @@ for i in $(seq 1 1 $max_iterations); do
     done
 done
 
-python3 recap.py $datafile
+python3 $curdir/recap.py $datafile
