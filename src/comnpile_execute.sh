@@ -53,7 +53,7 @@ measure() {
     shift 3
     cmd=$@
     #handle the default option
-    if [ $optionstag == "deafult" ]; then
+    if [ $optionstag == "default" ]; then
         options=""
     else
         options=$optionstag
@@ -104,7 +104,7 @@ for i in $(seq 1 1 $max_iterations); do
         tag=$(echo $line | awk -F ' ' '{print $1'})
         options=$(echo $line | awk -F ' ' '{for (i=2; i <= NF; i++) printf " "$i ;}')
         if [ -z $options ]; then
-            options="deafult"
+            options="default"
         fi
         # compile $i $tag $options $cmd
         measure $i $tag $options $cmd

@@ -22,12 +22,12 @@ while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     n)
         max_iterations=${OPTARG}
         ;;
-    *)
+    ?)
         opt_dec=$((opt_dec + 1))
         ;;
     esac
 done
-shift $((OPTIND - 1 + opt_dec))
+shift $((OPTIND - opt_dec + 1))
 
 curdir="$(dirname -- $(
     readlink -fn -- "$0"
@@ -46,7 +46,7 @@ measure() {
     shift 3
     cmd=$@
     #handle the default option
-    if [ $optionstag == "deafult" ]; then
+    if [ $optionstag == "default" ]; then
         options=""
     else
         options=$optionstag
@@ -97,7 +97,7 @@ for i in $(seq 1 1 $max_iterations); do
         tag=$(echo $line | awk -F ' ' '{print $1'})
         options=$(echo $line | awk -F ' ' '{for (i=2; i <= NF; i++) printf " "$i ;}')
         if [ -z $options ]; then
-            options="deafult"
+            options="default"
         fi
         measure $i $tag $options $cmd
         sleep $sleep_duration
