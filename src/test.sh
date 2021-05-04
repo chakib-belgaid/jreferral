@@ -8,12 +8,12 @@ sleep_duration=1
 s=""
 opt_dec=0
 
-while getopts "u:d:l:n:" o >/dev/null 2>&1; do
+while getopts "du:o:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
     u)
         user=${OPTARG}
         ;;
-    d)
+    o)
         datafile=${OPTARG}
         ;;
     l)
@@ -22,9 +22,14 @@ while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     n)
         max_iterations=${OPTARG}
         ;;
+    d)
+        details="True"
+        ;;
+
     ?)
         opt_dec=$((opt_dec + 1))
         ;;
+
     esac
 done
 shift $((OPTIND - opt_dec + 1))
@@ -104,4 +109,10 @@ for i in $(seq 1 1 $max_iterations); do
     done
 done
 
-python3 $curdir/recap.py $datafile
+if [ -n "$details" ]; then
+
+    python3 $curdir/recap.py -d $datafile
+else
+
+    python3 $curdir/recap.py $datafile
+fi

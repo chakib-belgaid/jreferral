@@ -2,15 +2,17 @@
 import sys 
 import pandas  as pd 
 from  tabulate import tabulate
+import argparse
+
 pd.options.mode.chained_assignment = None
 
-def get_recap(x):
+def get_recap_details(x):
     recap=pd.DataFrame()
     mins=x.min()
     maxs=x.max()
     means=x.mean()
     stds=x.std()
-    
+
     mini=x.loc[x["duration"]==mins["duration"]]
     mini["Metric"]="Execution Time"
     recap=recap.append(mini)
@@ -26,6 +28,7 @@ def get_recap(x):
     maxi["Metric"]="Execution Time"
     maxi["Type"]="Worst"
     recap=recap.append(maxi)
+
     maxi=x.loc[x["CPU"]==maxs["CPU"]]
     maxi["Metric"]="Energy PKG"
     maxi["Type"]="Worst"
@@ -49,6 +52,43 @@ def get_recap(x):
     recap=recap.fillna('')
     return recap
 
+def get_recap(x):
+    recap=pd.DataFrame()
+    mins=x.min()
+    maxs=x.max()
+    means=x.mean()
+    stds=x.std()
+
+    mini=x.loc[x["duration"]==mins["duration"]]
+    mini["Metric"]="Execution Time"
+    recap=recap.append(mini)
+    mini=x.loc[x["energy"]==mins["energy"]]
+    mini["Metric"]="Energy"
+    recap=recap.append(mini)
+    recap["Type"]="Best"
+    
+    maxi=x.loc[x["duration"]==maxs["duration"]]
+    maxi["Metric"]="Execution Time"
+    maxi["Type"]="Worst"
+    recap=recap.append(maxi)
+    maxi=x.loc[x["energy"]==maxs["energy"]]
+    maxi["Metric"]="Energy"
+    maxi["Type"]="Worst"
+    recap=recap.append(maxi)
+    recap.reset_index(inplace=True)  
+    means["Type"]="Mean"
+    stds["Type"]="STD"
+    means["Metric"]="All"
+    stds["Metric"]="All"
+    recap=recap.append(means,ignore_index=True)
+    recap=recap.append(stds,ignore_index=True)
+    recap=recap.set_index(["Type","Metric"]).loc[:,["duration","energy","jvm","options"]]
+    recap["duration"]=recap["duration"]/1000000
+    recap["energy"]=recap["energy"]/1000000
+    recap.columns=["Execution Time (s)","Total Energy (J)", "JVM","Execution Flags"]
+    recap=recap.fillna('')
+    return recap
+
 def highlight_max(s):
     is_max = np.logical_and(s == s[:-1].max()  ,s.apply(lambda x:type(x) is float))
     return ['color: red' if v else '' for v in is_max]
@@ -66,13 +106,22 @@ def read_data(path):
                                      "DRAM":"Int64","CPU":"Int64"})
     data=data.dropna()
     data=data.loc[data["exitcode"]==0]
+    data["energy"]=data["CPU"]+data["DRAM"]
     return data
 
 if __name__=="__main__" :
-    path=sys.argv[1]
-    data=read_data(path)
-    x=data.groupby(["jvm","options"]).mean()
-    recap=get_recap(x)
+    parser = argparse.ArgumentParser() 
+    parser.add_argument('-d','--details',
+        action='store_true',
+        default=False,
+        
+        help='Print the energy PKG and DRAM in Details')
+    parser.add_argument("path", help="path of the csv file")
+    args = parser.parse_args()
+    data=read_data(args.path)
+    maxi=max(data["iteration"].unique())
+    x=data.groupby(["jvm","options"]).median()
+    recap=get_recap_details(x) if args.details else get_recap(x) 
     recap.reset_index(inplace=True)
-
+    print(f"Number of configurations : {len(x) } \nNumber of executions per configuration : {maxi}\nThe best confifuration based on the median")
     print(tabulate(recap,headers =recap.columns,showindex = False,tablefmt="fancy_grid"))

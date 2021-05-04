@@ -89,7 +89,7 @@ calculate_energy() {
     }      
 
     for (i in maxenergies1 ){
-        split(max1[i],datamax,",")
+        split(maxenergies1[i],datamax,",")
         energiesmax[datamax[1]] =datamax[3]
     }      
 
