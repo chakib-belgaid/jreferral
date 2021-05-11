@@ -114,14 +114,34 @@ if __name__=="__main__" :
     parser.add_argument('-d','--details',
         action='store_true',
         default=False,
-        
         help='Print the energy PKG and DRAM in Details')
+    parser.add_argument('-b','--bulk',
+        action='store_true',
+        default=False,
+        help='only use with the script bulk.sh')
     parser.add_argument("path", help="path of the csv file")
+    
     args = parser.parse_args()
     data=read_data(args.path)
     maxi=max(data["iteration"].unique())
-    x=data.groupby(["jvm","options"]).median()
-    recap=get_recap_details(x) if args.details else get_recap(x) 
+    if args.bulk :
+        benchmarks=data["benchmark"].unique()
+        l=[]
+        length=0
+        for bench in benchmarks :
+            dt=data.loc[data["benchmark"]==bench]
+            recapbench=get_recap_details(dt) if args.details else get_recap(dt)
+            recapbench["benchmark"]=bench
+            length=max(length,len(recapbench))
+            l.append(recapbench)
+        recap = pd.concat(l)
+        recap = recap.set_index("benchmark")
+
+    else :
+        x=data.groupby(["jvm","options"]).median()
+        recap=get_recap_details(x) if args.details else get_recap(x)
+        length=(len(x))
     recap.reset_index(inplace=True)
-    print(f"Number of configurations : {len(x) } \nNumber of executions per configuration : {maxi}\nThe best confifuration based on the median")
+    print(f"Number of configurations : {length } \nNumber of executions per configuration : {maxi}\nThe best confifuration based on the median")
+    
     print(tabulate(recap,headers =recap.columns,showindex = False,tablefmt="fancy_grid"))

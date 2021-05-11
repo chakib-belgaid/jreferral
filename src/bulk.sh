@@ -132,7 +132,7 @@ done
 
 if [ -n "$details" ]; then
 
-    python3 $curdir/recap.py -d $datafile
+    python3 $curdir/recap.py -d -b $datafile
 else
 
     python3 $curdir/recap.py $datafile
