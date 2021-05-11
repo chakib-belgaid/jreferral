@@ -135,7 +135,9 @@ if __name__=="__main__" :
             length=max(length,len(recapbench))
             l.append(recapbench)
         recap = pd.concat(l)
+        recap.reset_index(inplace=True)
         recap = recap.set_index("benchmark")
+
 
     else :
         x=data.groupby(["jvm","options"]).median()
