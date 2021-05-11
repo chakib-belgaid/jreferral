@@ -54,7 +54,7 @@ If you want to test multiple benchmarks you can use [bulk.sh](./src/bulk.sh), to
 
 this is an example to test the energy consumption of [zip4j](https://github.com/srikanth-lingala/zip4j)
 
-![zip4j](https://github.com/chakib-belgaid/jreferral/imgs/zip4j.png?raw=true)
 
+![zip4j](https://github.com/chakib-belgaid/jreferral/blob/master/imgs/zip4j.png?raw=true)
 and for the detailed version (aka -d)
-![zip4j detailed ](https://github.com/chakib-belgaid/jreferral/imgs/zip4jdetailed.png?raw=true)
+![zip4j detailed ](https://github.com/chakib-belgaid/jreferral/blob/master/imgs/zip4jdetailed.png?raw=true)
