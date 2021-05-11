@@ -2,30 +2,19 @@
 
 # the option -v
 
-duration=5
-
-frequency=1
-while getopts "o:lbvnd:f:" o; do
+while getopts "o:lcv" o; do
     case "${o}" in
     v)
         verbose="True"
         ;;
-    d)
-        duration=${OPTARG}
-        ;;
-    f)
-        frequency=${OPTARG}
-        ;;
-    n)
-        net="True"
-        ;;
-    b)
+    c)
         csv="True"
         ;;
     l)
         list_dom="True"
         ;;
     o)
+        output="True"
         outputfile=${OPTARG}
         ;;
     esac
@@ -232,7 +221,7 @@ get_raw_energy() {
     beginT=$(date +"%s%N")
 
     ###############################################
-    if [ -n $outputfile ]; then
+    if [ -n "$outputfile" ]; then
 
         $@ 2>&1 >>$outputfile
         exit_code=$?
@@ -282,6 +271,3 @@ else
 fi
 
 exit $exit_code
-# totalsteps=$((duration * frequency))
-# step=$(echo $frequency | awk '{printf 1/$1}')
-# echo $step

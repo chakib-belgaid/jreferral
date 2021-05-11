@@ -1,16 +1,24 @@
 #! /bin/bash
 
-curdir="$(dirname -- $(readlink -fn -- "$0"; echo x))"
-curdir="${curdir%x}"
+while getopts "u:" o >/dev/null 2>&1; do
+    case "${o}" in
+    u)
+        USERNAME=${OPTARG}
+        ;;
+    esac
+done
 
+export -x USERNAME=${USERNAME:-$USER}
+
+curdir="$(dirname -- $(
+    readlink -fn -- "$0"
+    echo x
+))"
+curdir="${curdir%x}"
 IFS=$'\n'
 jvms=$(grep -v "#" $curdir/jvms.sh | awk -F ' ' '{print $1'})
 
-
-user=chakibmed
-
 for jvm in ${jvms[@]}; do
     echo building jvm $jvm
-    docker build --tag $user/jvm:$jvm --build-arg TAG="$jvm" -f $curdir/images-builder/baseimage.Dockerfile $curdir/images-builder
-
+    docker build --tag $USERNAME/jvm:$jvm --build-arg TAG="$jvm" -f $curdir/images-builder/baseimage.Dockerfile $curdir/images-builder
 done

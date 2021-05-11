@@ -1,0 +1,912 @@
+
+-------16.0.0.j9-adpt----1---deafult---
+-------16.0.0.hs-adpt----1---deafult---
+-------11.0.11.j9-adpt----1---deafult---
+-------11.0.11.hs-adpt----1---deafult---
+-------11.0.10.j9-adpt----1---deafult---
+-------11.0.10.hs-adpt----1---deafult---
+-------8.0.292.j9-adpt----1---deafult---
+-------8.0.292.hs-adpt----1---deafult---
+-------8.0.282.j9-adpt----1---deafult---
+-------8.0.282.hs-adpt----1---deafult---
+-------11.0.9.4-albba----1---deafult---
+-------8.5.5-albba----1---deafult---
+-------16.0.1.9.1-amzn----1---deafult---
+-------16.0.0.36.1-amzn----1---deafult---
+-------15.0.2.7.1-amzn----1---deafult---
+-------11.0.11.9.1-amzn----1---deafult---
+-------11.0.10.9.1-amzn----1---deafult---
+-------8.292.10.1-amzn----1---deafult---
+-------8.282.08.1-amzn----1---deafult---
+-------16.0.0-zulu----1---deafult---
+-------16.0.0.fx-zulu----1---deafult---
+-------15.0.2.fx-zulu----1---deafult---
+-------11.0.11-zulu----1---deafult---
+-------11.0.10-zulu----1---deafult---
+-------11.0.10.fx-zulu----1---deafult---
+-------8.0.292-zulu----1---deafult---
+-------8.0.282-zulu----1---deafult---
+-------8.0.282.fx-zulu----1---deafult---
+-------7.0.302-zulu----1---deafult---
+-------7.0.292-zulu----1---deafult---
+-------6.0.119-zulu----1---deafult---
+-------16.0.1.fx-librca----1---deafult---
+-------16.0.1-librca----1---deafult---
+-------16.0.0.fx-librca----1---deafult---
+-------16.0.0-librca----1---deafult---
+-------11.0.11.fx-librca----1---deafult---
+-------11.0.11-librca----1---deafult---
+-------11.0.10.fx-librca----1---deafult---
+-------11.0.10-librca----1---deafult---
+-------8.0.292.fx-librca----1---deafult---
+-------8.0.292-librca----1---deafult---
+-------8.0.282.fx-librca----1---deafult---
+-------8.0.282-librca----1---deafult---
+-------21.1.0.r16-grl----1---deafult---
+-------21.1.0.r11-grl----1---deafult---
+-------21.1.0.r8-grl----1---deafult---
+-------21.0.0.2.r11-grl----1---deafult---
+-------21.0.0.2.r8-grl----1---deafult---
+-------20.3.2.r11-grl----1---deafult---
+-------20.3.2.r8-grl----1---deafult---
+-------20.3.1.2.r11-grl----1---deafult---
+-------20.3.1.2.r8-grl----1---deafult---
+-------19.3.6.r11-grl----1---deafult---
+-------19.3.6.r8-grl----1---deafult---
+-------19.3.5.r11-grl----1---deafult---
+-------19.3.5.r8-grl----1---deafult---
+-------17.ea.19-open----1---deafult---
+-------17.ea.6.lm-open----1---deafult---
+-------17.ea.2.pma-open----1---deafult---
+-------16-open----1---deafult---
+-------16.0.1-open----1---deafult---
+-------11.0.11-open----1---deafult---
+-------11.0.10-open----1---deafult---
+-------11.0.2-open----1---deafult---
+-------8.0.292-open----1---deafult---
+-------8.0.282-open----1---deafult---
+-------8.0.265-open----1---deafult---
+-------21.0.0.0-mandrel----1---deafult---
+-------20.3.1.2-mandrel----1---deafult---
+-------11.0.11.9.1-ms----1---deafult---
+-------11.0.10.9-ms----1---deafult---
+-------16-sapmchn----1---deafult---
+-------16.0.1-sapmchn----1---deafult---
+-------15.0.2-sapmchn----1---deafult---
+-------11.0.11-sapmchn----1---deafult---
+-------11.0.10-sapmchn----1---deafult---
+-------11.0.9-trava----1---deafult---
+-------8.0.232-trava----1---deafult---
+-------20.2.0.r11-grl----1--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----1--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----1--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----1--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----1--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----1--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----1--- -Xjit:count=0---
+-------15.0.1.j9-adpt----1--- -Xjit:count=1---
+-------15.0.1.j9-adpt----1--- -Xjit:count=10---
+-------15.0.1.j9-adpt----1--- -Xjit:count=100---
+-------15.0.1.j9-adpt----1--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----1--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----1--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----1--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----1--- -Xjit:optlevel=scorching---
+-------15.0.1-open----1--- -XX:-TieredCompilation---
+-------15.0.1-open----1--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----1--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----1--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----1--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----1--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----1--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----1--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----1--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----1--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----1--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----1--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----1--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----1--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----1--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----1--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----1--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----1--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----1--- -Xgcpolicy:optthruput---
+-------15.0.1-open----1--- -XX:+UseG1GC---
+-------15.0.1-open----1--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----1--- -XX:ConcGCThreads=5---
+-------15.0.1-open----1--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----1--- -XX:ConcGCThreads=1---
+-------15.0.1-open----1--- -XX:+DisableExplicitGC---
+-------15.0.1-open----1--- -XX:+UseParallelGC---
+-------15.0.1-open----1--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----1--- -XX:+UseSerialGC---
+-------15.0.1-open----1--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.517s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----2---deafult---
+-------16.0.0.hs-adpt----2---deafult---
+-------11.0.11.j9-adpt----2---deafult---
+-------11.0.11.hs-adpt----2---deafult---
+-------11.0.10.j9-adpt----2---deafult---
+-------11.0.10.hs-adpt----2---deafult---
+-------8.0.292.j9-adpt----2---deafult---
+-------8.0.292.hs-adpt----2---deafult---
+-------8.0.282.j9-adpt----2---deafult---
+-------8.0.282.hs-adpt----2---deafult---
+-------11.0.9.4-albba----2---deafult---
+-------8.5.5-albba----2---deafult---
+-------16.0.1.9.1-amzn----2---deafult---
+-------16.0.0.36.1-amzn----2---deafult---
+-------15.0.2.7.1-amzn----2---deafult---
+-------11.0.11.9.1-amzn----2---deafult---
+-------11.0.10.9.1-amzn----2---deafult---
+-------8.292.10.1-amzn----2---deafult---
+-------8.282.08.1-amzn----2---deafult---
+-------16.0.0-zulu----2---deafult---
+-------16.0.0.fx-zulu----2---deafult---
+-------15.0.2.fx-zulu----2---deafult---
+-------11.0.11-zulu----2---deafult---
+-------11.0.10-zulu----2---deafult---
+-------11.0.10.fx-zulu----2---deafult---
+-------8.0.292-zulu----2---deafult---
+-------8.0.282-zulu----2---deafult---
+-------8.0.282.fx-zulu----2---deafult---
+-------7.0.302-zulu----2---deafult---
+-------7.0.292-zulu----2---deafult---
+-------6.0.119-zulu----2---deafult---
+-------16.0.1.fx-librca----2---deafult---
+-------16.0.1-librca----2---deafult---
+-------16.0.0.fx-librca----2---deafult---
+-------16.0.0-librca----2---deafult---
+-------11.0.11.fx-librca----2---deafult---
+-------11.0.11-librca----2---deafult---
+-------11.0.10.fx-librca----2---deafult---
+-------11.0.10-librca----2---deafult---
+-------8.0.292.fx-librca----2---deafult---
+-------8.0.292-librca----2---deafult---
+-------8.0.282.fx-librca----2---deafult---
+-------8.0.282-librca----2---deafult---
+-------21.1.0.r16-grl----2---deafult---
+-------21.1.0.r11-grl----2---deafult---
+-------21.1.0.r8-grl----2---deafult---
+-------21.0.0.2.r11-grl----2---deafult---
+-------21.0.0.2.r8-grl----2---deafult---
+-------20.3.2.r11-grl----2---deafult---
+-------20.3.2.r8-grl----2---deafult---
+-------20.3.1.2.r11-grl----2---deafult---
+-------20.3.1.2.r8-grl----2---deafult---
+-------19.3.6.r11-grl----2---deafult---
+-------19.3.6.r8-grl----2---deafult---
+-------19.3.5.r11-grl----2---deafult---
+-------19.3.5.r8-grl----2---deafult---
+-------17.ea.19-open----2---deafult---
+-------17.ea.6.lm-open----2---deafult---
+-------17.ea.2.pma-open----2---deafult---
+-------16-open----2---deafult---
+-------16.0.1-open----2---deafult---
+-------11.0.11-open----2---deafult---
+-------11.0.10-open----2---deafult---
+-------11.0.2-open----2---deafult---
+-------8.0.292-open----2---deafult---
+-------8.0.282-open----2---deafult---
+-------8.0.265-open----2---deafult---
+-------21.0.0.0-mandrel----2---deafult---
+-------20.3.1.2-mandrel----2---deafult---
+-------11.0.11.9.1-ms----2---deafult---
+-------11.0.10.9-ms----2---deafult---
+-------16-sapmchn----2---deafult---
+-------16.0.1-sapmchn----2---deafult---
+-------15.0.2-sapmchn----2---deafult---
+-------11.0.11-sapmchn----2---deafult---
+-------11.0.10-sapmchn----2---deafult---
+-------11.0.9-trava----2---deafult---
+-------8.0.232-trava----2---deafult---
+-------20.2.0.r11-grl----2--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----2--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----2--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----2--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----2--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----2--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----2--- -Xjit:count=0---
+-------15.0.1.j9-adpt----2--- -Xjit:count=1---
+-------15.0.1.j9-adpt----2--- -Xjit:count=10---
+-------15.0.1.j9-adpt----2--- -Xjit:count=100---
+-------15.0.1.j9-adpt----2--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----2--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----2--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----2--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----2--- -Xjit:optlevel=scorching---
+-------15.0.1-open----2--- -XX:-TieredCompilation---
+-------15.0.1-open----2--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----2--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----2--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----2--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----2--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----2--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----2--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----2--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----2--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----2--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----2--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----2--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----2--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----2--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----2--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----2--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----2--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----2--- -Xgcpolicy:optthruput---
+-------15.0.1-open----2--- -XX:+UseG1GC---
+-------15.0.1-open----2--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----2--- -XX:ConcGCThreads=5---
+-------15.0.1-open----2--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----2--- -XX:ConcGCThreads=1---
+-------15.0.1-open----2--- -XX:+DisableExplicitGC---
+-------15.0.1-open----2--- -XX:+UseParallelGC---
+-------15.0.1-open----2--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----2--- -XX:+UseSerialGC---
+-------15.0.1-open----2--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.522s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----3---deafult---
+-------16.0.0.hs-adpt----3---deafult---
+-------11.0.11.j9-adpt----3---deafult---
+-------11.0.11.hs-adpt----3---deafult---
+-------11.0.10.j9-adpt----3---deafult---
+-------11.0.10.hs-adpt----3---deafult---
+-------8.0.292.j9-adpt----3---deafult---
+-------8.0.292.hs-adpt----3---deafult---
+-------8.0.282.j9-adpt----3---deafult---
+-------8.0.282.hs-adpt----3---deafult---
+-------11.0.9.4-albba----3---deafult---
+-------8.5.5-albba----3---deafult---
+-------16.0.1.9.1-amzn----3---deafult---
+-------16.0.0.36.1-amzn----3---deafult---
+-------15.0.2.7.1-amzn----3---deafult---
+-------11.0.11.9.1-amzn----3---deafult---
+-------11.0.10.9.1-amzn----3---deafult---
+-------8.292.10.1-amzn----3---deafult---
+-------8.282.08.1-amzn----3---deafult---
+-------16.0.0-zulu----3---deafult---
+-------16.0.0.fx-zulu----3---deafult---
+-------15.0.2.fx-zulu----3---deafult---
+-------11.0.11-zulu----3---deafult---
+-------11.0.10-zulu----3---deafult---
+-------11.0.10.fx-zulu----3---deafult---
+-------8.0.292-zulu----3---deafult---
+-------8.0.282-zulu----3---deafult---
+-------8.0.282.fx-zulu----3---deafult---
+-------7.0.302-zulu----3---deafult---
+-------7.0.292-zulu----3---deafult---
+-------6.0.119-zulu----3---deafult---
+-------16.0.1.fx-librca----3---deafult---
+-------16.0.1-librca----3---deafult---
+-------16.0.0.fx-librca----3---deafult---
+-------16.0.0-librca----3---deafult---
+-------11.0.11.fx-librca----3---deafult---
+-------11.0.11-librca----3---deafult---
+-------11.0.10.fx-librca----3---deafult---
+-------11.0.10-librca----3---deafult---
+-------8.0.292.fx-librca----3---deafult---
+-------8.0.292-librca----3---deafult---
+-------8.0.282.fx-librca----3---deafult---
+-------8.0.282-librca----3---deafult---
+-------21.1.0.r16-grl----3---deafult---
+-------21.1.0.r11-grl----3---deafult---
+-------21.1.0.r8-grl----3---deafult---
+-------21.0.0.2.r11-grl----3---deafult---
+-------21.0.0.2.r8-grl----3---deafult---
+-------20.3.2.r11-grl----3---deafult---
+-------20.3.2.r8-grl----3---deafult---
+-------20.3.1.2.r11-grl----3---deafult---
+-------20.3.1.2.r8-grl----3---deafult---
+-------19.3.6.r11-grl----3---deafult---
+-------19.3.6.r8-grl----3---deafult---
+-------19.3.5.r11-grl----3---deafult---
+-------19.3.5.r8-grl----3---deafult---
+-------17.ea.19-open----3---deafult---
+-------17.ea.6.lm-open----3---deafult---
+-------17.ea.2.pma-open----3---deafult---
+-------16-open----3---deafult---
+-------16.0.1-open----3---deafult---
+-------11.0.11-open----3---deafult---
+-------11.0.10-open----3---deafult---
+-------11.0.2-open----3---deafult---
+-------8.0.292-open----3---deafult---
+-------8.0.282-open----3---deafult---
+-------8.0.265-open----3---deafult---
+-------21.0.0.0-mandrel----3---deafult---
+-------20.3.1.2-mandrel----3---deafult---
+-------11.0.11.9.1-ms----3---deafult---
+-------11.0.10.9-ms----3---deafult---
+-------16-sapmchn----3---deafult---
+-------16.0.1-sapmchn----3---deafult---
+-------15.0.2-sapmchn----3---deafult---
+-------11.0.11-sapmchn----3---deafult---
+-------11.0.10-sapmchn----3---deafult---
+-------11.0.9-trava----3---deafult---
+-------8.0.232-trava----3---deafult---
+-------20.2.0.r11-grl----3--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----3--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----3--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----3--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----3--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----3--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----3--- -Xjit:count=0---
+-------15.0.1.j9-adpt----3--- -Xjit:count=1---
+-------15.0.1.j9-adpt----3--- -Xjit:count=10---
+-------15.0.1.j9-adpt----3--- -Xjit:count=100---
+-------15.0.1.j9-adpt----3--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----3--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----3--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----3--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----3--- -Xjit:optlevel=scorching---
+-------15.0.1-open----3--- -XX:-TieredCompilation---
+-------15.0.1-open----3--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----3--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----3--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----3--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----3--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----3--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----3--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----3--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----3--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----3--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----3--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----3--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----3--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----3--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----3--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----3--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----3--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----3--- -Xgcpolicy:optthruput---
+-------15.0.1-open----3--- -XX:+UseG1GC---
+-------15.0.1-open----3--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----3--- -XX:ConcGCThreads=5---
+-------15.0.1-open----3--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----3--- -XX:ConcGCThreads=1---
+-------15.0.1-open----3--- -XX:+DisableExplicitGC---
+-------15.0.1-open----3--- -XX:+UseParallelGC---
+-------15.0.1-open----3--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----3--- -XX:+UseSerialGC---
+-------15.0.1-open----3--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.521s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----4---deafult---
+-------16.0.0.hs-adpt----4---deafult---
+-------11.0.11.j9-adpt----4---deafult---
+-------11.0.11.hs-adpt----4---deafult---
+-------11.0.10.j9-adpt----4---deafult---
+-------11.0.10.hs-adpt----4---deafult---
+-------8.0.292.j9-adpt----4---deafult---
+-------8.0.292.hs-adpt----4---deafult---
+-------8.0.282.j9-adpt----4---deafult---
+-------8.0.282.hs-adpt----4---deafult---
+-------11.0.9.4-albba----4---deafult---
+-------8.5.5-albba----4---deafult---
+-------16.0.1.9.1-amzn----4---deafult---
+-------16.0.0.36.1-amzn----4---deafult---
+-------15.0.2.7.1-amzn----4---deafult---
+-------11.0.11.9.1-amzn----4---deafult---
+-------11.0.10.9.1-amzn----4---deafult---
+-------8.292.10.1-amzn----4---deafult---
+-------8.282.08.1-amzn----4---deafult---
+-------16.0.0-zulu----4---deafult---
+-------16.0.0.fx-zulu----4---deafult---
+-------15.0.2.fx-zulu----4---deafult---
+-------11.0.11-zulu----4---deafult---
+-------11.0.10-zulu----4---deafult---
+-------11.0.10.fx-zulu----4---deafult---
+-------8.0.292-zulu----4---deafult---
+-------8.0.282-zulu----4---deafult---
+-------8.0.282.fx-zulu----4---deafult---
+-------7.0.302-zulu----4---deafult---
+-------7.0.292-zulu----4---deafult---
+-------6.0.119-zulu----4---deafult---
+-------16.0.1.fx-librca----4---deafult---
+-------16.0.1-librca----4---deafult---
+-------16.0.0.fx-librca----4---deafult---
+-------16.0.0-librca----4---deafult---
+-------11.0.11.fx-librca----4---deafult---
+-------11.0.11-librca----4---deafult---
+-------11.0.10.fx-librca----4---deafult---
+-------11.0.10-librca----4---deafult---
+-------8.0.292.fx-librca----4---deafult---
+-------8.0.292-librca----4---deafult---
+-------8.0.282.fx-librca----4---deafult---
+-------8.0.282-librca----4---deafult---
+-------21.1.0.r16-grl----4---deafult---
+-------21.1.0.r11-grl----4---deafult---
+-------21.1.0.r8-grl----4---deafult---
+-------21.0.0.2.r11-grl----4---deafult---
+-------21.0.0.2.r8-grl----4---deafult---
+-------20.3.2.r11-grl----4---deafult---
+-------20.3.2.r8-grl----4---deafult---
+-------20.3.1.2.r11-grl----4---deafult---
+-------20.3.1.2.r8-grl----4---deafult---
+-------19.3.6.r11-grl----4---deafult---
+-------19.3.6.r8-grl----4---deafult---
+-------19.3.5.r11-grl----4---deafult---
+-------19.3.5.r8-grl----4---deafult---
+-------17.ea.19-open----4---deafult---
+-------17.ea.6.lm-open----4---deafult---
+-------17.ea.2.pma-open----4---deafult---
+-------16-open----4---deafult---
+-------16.0.1-open----4---deafult---
+-------11.0.11-open----4---deafult---
+-------11.0.10-open----4---deafult---
+-------11.0.2-open----4---deafult---
+-------8.0.292-open----4---deafult---
+-------8.0.282-open----4---deafult---
+-------8.0.265-open----4---deafult---
+-------21.0.0.0-mandrel----4---deafult---
+-------20.3.1.2-mandrel----4---deafult---
+-------11.0.11.9.1-ms----4---deafult---
+-------11.0.10.9-ms----4---deafult---
+-------16-sapmchn----4---deafult---
+-------16.0.1-sapmchn----4---deafult---
+-------15.0.2-sapmchn----4---deafult---
+-------11.0.11-sapmchn----4---deafult---
+-------11.0.10-sapmchn----4---deafult---
+-------11.0.9-trava----4---deafult---
+-------8.0.232-trava----4---deafult---
+-------20.2.0.r11-grl----4--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----4--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----4--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----4--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----4--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----4--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----4--- -Xjit:count=0---
+-------15.0.1.j9-adpt----4--- -Xjit:count=1---
+-------15.0.1.j9-adpt----4--- -Xjit:count=10---
+-------15.0.1.j9-adpt----4--- -Xjit:count=100---
+-------15.0.1.j9-adpt----4--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----4--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----4--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----4--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----4--- -Xjit:optlevel=scorching---
+-------15.0.1-open----4--- -XX:-TieredCompilation---
+-------15.0.1-open----4--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----4--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----4--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----4--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----4--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----4--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----4--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----4--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----4--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----4--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----4--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----4--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----4--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----4--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----4--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----4--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----4--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----4--- -Xgcpolicy:optthruput---
+-------15.0.1-open----4--- -XX:+UseG1GC---
+-------15.0.1-open----4--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----4--- -XX:ConcGCThreads=5---
+-------15.0.1-open----4--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----4--- -XX:ConcGCThreads=1---
+-------15.0.1-open----4--- -XX:+DisableExplicitGC---
+-------15.0.1-open----4--- -XX:+UseParallelGC---
+-------15.0.1-open----4--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----4--- -XX:+UseSerialGC---
+-------15.0.1-open----4--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.535s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----5---deafult---
+-------16.0.0.hs-adpt----5---deafult---
+-------11.0.11.j9-adpt----5---deafult---
+-------11.0.11.hs-adpt----5---deafult---
+-------11.0.10.j9-adpt----5---deafult---
+-------11.0.10.hs-adpt----5---deafult---
+-------8.0.292.j9-adpt----5---deafult---
+-------8.0.292.hs-adpt----5---deafult---
+-------8.0.282.j9-adpt----5---deafult---
+-------8.0.282.hs-adpt----5---deafult---
+-------11.0.9.4-albba----5---deafult---
+-------8.5.5-albba----5---deafult---
+-------16.0.1.9.1-amzn----5---deafult---
+-------16.0.0.36.1-amzn----5---deafult---
+-------15.0.2.7.1-amzn----5---deafult---
+-------11.0.11.9.1-amzn----5---deafult---
+-------11.0.10.9.1-amzn----5---deafult---
+-------8.292.10.1-amzn----5---deafult---
+-------8.282.08.1-amzn----5---deafult---
+-------16.0.0-zulu----5---deafult---
+-------16.0.0.fx-zulu----5---deafult---
+-------15.0.2.fx-zulu----5---deafult---
+-------11.0.11-zulu----5---deafult---
+-------11.0.10-zulu----5---deafult---
+-------11.0.10.fx-zulu----5---deafult---
+-------8.0.292-zulu----5---deafult---
+-------8.0.282-zulu----5---deafult---
+-------8.0.282.fx-zulu----5---deafult---
+-------7.0.302-zulu----5---deafult---
+-------7.0.292-zulu----5---deafult---
+-------6.0.119-zulu----5---deafult---
+-------16.0.1.fx-librca----5---deafult---
+-------16.0.1-librca----5---deafult---
+-------16.0.0.fx-librca----5---deafult---
+-------16.0.0-librca----5---deafult---
+-------11.0.11.fx-librca----5---deafult---
+-------11.0.11-librca----5---deafult---
+-------11.0.10.fx-librca----5---deafult---
+-------11.0.10-librca----5---deafult---
+-------8.0.292.fx-librca----5---deafult---
+-------8.0.292-librca----5---deafult---
+-------8.0.282.fx-librca----5---deafult---
+-------8.0.282-librca----5---deafult---
+-------21.1.0.r16-grl----5---deafult---
+-------21.1.0.r11-grl----5---deafult---
+-------21.1.0.r8-grl----5---deafult---
+-------21.0.0.2.r11-grl----5---deafult---
+-------21.0.0.2.r8-grl----5---deafult---
+-------20.3.2.r11-grl----5---deafult---
+-------20.3.2.r8-grl----5---deafult---
+-------20.3.1.2.r11-grl----5---deafult---
+-------20.3.1.2.r8-grl----5---deafult---
+-------19.3.6.r11-grl----5---deafult---
+-------19.3.6.r8-grl----5---deafult---
+-------19.3.5.r11-grl----5---deafult---
+-------19.3.5.r8-grl----5---deafult---
+-------17.ea.19-open----5---deafult---
+-------17.ea.6.lm-open----5---deafult---
+-------17.ea.2.pma-open----5---deafult---
+-------16-open----5---deafult---
+-------16.0.1-open----5---deafult---
+-------11.0.11-open----5---deafult---
+-------11.0.10-open----5---deafult---
+-------11.0.2-open----5---deafult---
+-------8.0.292-open----5---deafult---
+-------8.0.282-open----5---deafult---
+-------8.0.265-open----5---deafult---
+-------21.0.0.0-mandrel----5---deafult---
+-------20.3.1.2-mandrel----5---deafult---
+-------11.0.11.9.1-ms----5---deafult---
+-------11.0.10.9-ms----5---deafult---
+-------16-sapmchn----5---deafult---
+-------16.0.1-sapmchn----5---deafult---
+-------15.0.2-sapmchn----5---deafult---
+-------11.0.11-sapmchn----5---deafult---
+-------11.0.10-sapmchn----5---deafult---
+-------11.0.9-trava----5---deafult---
+-------8.0.232-trava----5---deafult---
+-------20.2.0.r11-grl----5--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----5--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----5--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----5--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----5--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----5--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----5--- -Xjit:count=0---
+-------15.0.1.j9-adpt----5--- -Xjit:count=1---
+-------15.0.1.j9-adpt----5--- -Xjit:count=10---
+-------15.0.1.j9-adpt----5--- -Xjit:count=100---
+-------15.0.1.j9-adpt----5--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----5--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----5--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----5--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----5--- -Xjit:optlevel=scorching---
+-------15.0.1-open----5--- -XX:-TieredCompilation---
+-------15.0.1-open----5--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----5--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----5--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----5--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----5--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----5--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----5--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----5--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----5--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----5--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----5--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----5--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----5--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----5--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----5--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----5--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----5--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----5--- -Xgcpolicy:optthruput---
+-------15.0.1-open----5--- -XX:+UseG1GC---
+-------15.0.1-open----5--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----5--- -XX:ConcGCThreads=5---
+-------15.0.1-open----5--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----5--- -XX:ConcGCThreads=1---
+-------15.0.1-open----5--- -XX:+DisableExplicitGC---
+-------15.0.1-open----5--- -XX:+UseParallelGC---
+-------15.0.1-open----5--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----5--- -XX:+UseSerialGC---
+-------15.0.1-open----5--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.520s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----6---deafult---
+-------16.0.0.hs-adpt----6---deafult---
+-------11.0.11.j9-adpt----6---deafult---
+-------11.0.11.hs-adpt----6---deafult---
+-------11.0.10.j9-adpt----6---deafult---
+-------11.0.10.hs-adpt----6---deafult---
+-------8.0.292.j9-adpt----6---deafult---
+-------8.0.292.hs-adpt----6---deafult---
+-------8.0.282.j9-adpt----6---deafult---
+-------8.0.282.hs-adpt----6---deafult---
+-------11.0.9.4-albba----6---deafult---
+-------8.5.5-albba----6---deafult---
+-------16.0.1.9.1-amzn----6---deafult---
+-------16.0.0.36.1-amzn----6---deafult---
+-------15.0.2.7.1-amzn----6---deafult---
+-------11.0.11.9.1-amzn----6---deafult---
+-------11.0.10.9.1-amzn----6---deafult---
+-------8.292.10.1-amzn----6---deafult---
+-------8.282.08.1-amzn----6---deafult---
+-------16.0.0-zulu----6---deafult---
+-------16.0.0.fx-zulu----6---deafult---
+-------15.0.2.fx-zulu----6---deafult---
+-------11.0.11-zulu----6---deafult---
+-------11.0.10-zulu----6---deafult---
+-------11.0.10.fx-zulu----6---deafult---
+-------8.0.292-zulu----6---deafult---
+-------8.0.282-zulu----6---deafult---
+-------8.0.282.fx-zulu----6---deafult---
+-------7.0.302-zulu----6---deafult---
+-------7.0.292-zulu----6---deafult---
+-------6.0.119-zulu----6---deafult---
+-------16.0.1.fx-librca----6---deafult---
+-------16.0.1-librca----6---deafult---
+-------16.0.0.fx-librca----6---deafult---
+-------16.0.0-librca----6---deafult---
+-------11.0.11.fx-librca----6---deafult---
+-------11.0.11-librca----6---deafult---
+-------11.0.10.fx-librca----6---deafult---
+-------11.0.10-librca----6---deafult---
+-------8.0.292.fx-librca----6---deafult---
+-------8.0.292-librca----6---deafult---
+-------8.0.282.fx-librca----6---deafult---
+-------8.0.282-librca----6---deafult---
+-------21.1.0.r16-grl----6---deafult---
+-------21.1.0.r11-grl----6---deafult---
+-------21.1.0.r8-grl----6---deafult---
+-------21.0.0.2.r11-grl----6---deafult---
+-------21.0.0.2.r8-grl----6---deafult---
+-------20.3.2.r11-grl----6---deafult---
+-------20.3.2.r8-grl----6---deafult---
+-------20.3.1.2.r11-grl----6---deafult---
+-------20.3.1.2.r8-grl----6---deafult---
+-------19.3.6.r11-grl----6---deafult---
+-------19.3.6.r8-grl----6---deafult---
+-------19.3.5.r11-grl----6---deafult---
+-------19.3.5.r8-grl----6---deafult---
+-------17.ea.19-open----6---deafult---
+-------17.ea.6.lm-open----6---deafult---
+-------17.ea.2.pma-open----6---deafult---
+-------16-open----6---deafult---
+-------16.0.1-open----6---deafult---
+-------11.0.11-open----6---deafult---
+-------11.0.10-open----6---deafult---
+-------11.0.2-open----6---deafult---
+-------8.0.292-open----6---deafult---
+-------8.0.282-open----6---deafult---
+-------8.0.265-open----6---deafult---
+-------21.0.0.0-mandrel----6---deafult---
+-------20.3.1.2-mandrel----6---deafult---
+-------11.0.11.9.1-ms----6---deafult---
+-------11.0.10.9-ms----6---deafult---
+-------16-sapmchn----6---deafult---
+-------16.0.1-sapmchn----6---deafult---
+-------15.0.2-sapmchn----6---deafult---
+-------11.0.11-sapmchn----6---deafult---
+-------11.0.10-sapmchn----6---deafult---
+-------11.0.9-trava----6---deafult---
+-------8.0.232-trava----6---deafult---
+-------20.2.0.r11-grl----6--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----6--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----6--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----6--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----6--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----6--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----6--- -Xjit:count=0---
+-------15.0.1.j9-adpt----6--- -Xjit:count=1---
+-------15.0.1.j9-adpt----6--- -Xjit:count=10---
+-------15.0.1.j9-adpt----6--- -Xjit:count=100---
+-------15.0.1.j9-adpt----6--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----6--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----6--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----6--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----6--- -Xjit:optlevel=scorching---
+-------15.0.1-open----6--- -XX:-TieredCompilation---
+-------15.0.1-open----6--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----6--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----6--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----6--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----6--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----6--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----6--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----6--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----6--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----6--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----6--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----6--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----6--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----6--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----6--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----6--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----6--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----6--- -Xgcpolicy:optthruput---
+-------15.0.1-open----6--- -XX:+UseG1GC---
+-------15.0.1-open----6--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----6--- -XX:ConcGCThreads=5---
+-------15.0.1-open----6--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----6--- -XX:ConcGCThreads=1---
+-------15.0.1-open----6--- -XX:+DisableExplicitGC---
+-------15.0.1-open----6--- -XX:+UseParallelGC---
+-------15.0.1-open----6--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----6--- -XX:+UseSerialGC---
+-------15.0.1-open----6--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.525s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----7---deafult---
+-------16.0.0.hs-adpt----7---deafult---
+-------11.0.11.j9-adpt----7---deafult---
+-------11.0.11.hs-adpt----7---deafult---
+-------11.0.10.j9-adpt----7---deafult---
+-------11.0.10.hs-adpt----7---deafult---
+-------8.0.292.j9-adpt----7---deafult---
+-------8.0.292.hs-adpt----7---deafult---
+-------8.0.282.j9-adpt----7---deafult---
+-------8.0.282.hs-adpt----7---deafult---
+-------11.0.9.4-albba----7---deafult---
+-------8.5.5-albba----7---deafult---
+-------16.0.1.9.1-amzn----7---deafult---
+-------16.0.0.36.1-amzn----7---deafult---
+-------15.0.2.7.1-amzn----7---deafult---
+-------11.0.11.9.1-amzn----7---deafult---
+-------11.0.10.9.1-amzn----7---deafult---
+-------8.292.10.1-amzn----7---deafult---
+-------8.282.08.1-amzn----7---deafult---
+-------16.0.0-zulu----7---deafult---
+-------16.0.0.fx-zulu----7---deafult---
+-------15.0.2.fx-zulu----7---deafult---
+-------11.0.11-zulu----7---deafult---
+-------11.0.10-zulu----7---deafult---
+-------11.0.10.fx-zulu----7---deafult---
+-------8.0.292-zulu----7---deafult---
+-------8.0.282-zulu----7---deafult---
+-------8.0.282.fx-zulu----7---deafult---
+-------7.0.302-zulu----7---deafult---
+-------7.0.292-zulu----7---deafult---
+-------6.0.119-zulu----7---deafult---
+-------16.0.1.fx-librca----7---deafult---
+-------16.0.1-librca----7---deafult---
+-------16.0.0.fx-librca----7---deafult---
+-------16.0.0-librca----7---deafult---
+-------11.0.11.fx-librca----7---deafult---
+-------11.0.11-librca----7---deafult---
+-------11.0.10.fx-librca----7---deafult---
+-------11.0.10-librca----7---deafult---
+-------8.0.292.fx-librca----7---deafult---
+-------8.0.292-librca----7---deafult---
+-------8.0.282.fx-librca----7---deafult---
+-------8.0.282-librca----7---deafult---
+-------21.1.0.r16-grl----7---deafult---
+-------21.1.0.r11-grl----7---deafult---
+-------21.1.0.r8-grl----7---deafult---
+-------21.0.0.2.r11-grl----7---deafult---
+-------21.0.0.2.r8-grl----7---deafult---
+-------20.3.2.r11-grl----7---deafult---
+-------20.3.2.r8-grl----7---deafult---
+-------20.3.1.2.r11-grl----7---deafult---
+-------20.3.1.2.r8-grl----7---deafult---
+-------19.3.6.r11-grl----7---deafult---
+-------19.3.6.r8-grl----7---deafult---
+-------19.3.5.r11-grl----7---deafult---
+-------19.3.5.r8-grl----7---deafult---
+-------17.ea.19-open----7---deafult---
+-------17.ea.6.lm-open----7---deafult---
+-------17.ea.2.pma-open----7---deafult---
+-------16-open----7---deafult---
+-------16.0.1-open----7---deafult---
+-------11.0.11-open----7---deafult---
+-------11.0.10-open----7---deafult---
+-------11.0.2-open----7---deafult---
+-------8.0.292-open----7---deafult---
+-------8.0.282-open----7---deafult---
+-------8.0.265-open----7---deafult---
+-------21.0.0.0-mandrel----7---deafult---
+-------20.3.1.2-mandrel----7---deafult---
+-------11.0.11.9.1-ms----7---deafult---
+-------11.0.10.9-ms----7---deafult---
+-------16-sapmchn----7---deafult---
+-------16.0.1-sapmchn----7---deafult---
+-------15.0.2-sapmchn----7---deafult---
+-------11.0.11-sapmchn----7---deafult---
+-------11.0.10-sapmchn----7---deafult---
+-------11.0.9-trava----7---deafult---
+-------8.0.232-trava----7---deafult---
+-------20.2.0.r11-grl----7--- -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----7--- -Dgraal.CompilerConfiguration=community---
+-------20.2.0.r11-grl----7--- -Dgraal.CompilerConfiguration=economy---
+-------15.0.1.j9-adpt----7--- -XcompilationThreads1---
+-------15.0.1.j9-adpt----7--- -XcompilationThreads3---
+-------15.0.1.j9-adpt----7--- -XcompilationThreads7---
+-------15.0.1.j9-adpt----7--- -Xjit:count=0---
+-------15.0.1.j9-adpt----7--- -Xjit:count=1---
+-------15.0.1.j9-adpt----7--- -Xjit:count=10---
+-------15.0.1.j9-adpt----7--- -Xjit:count=100---
+-------15.0.1.j9-adpt----7--- -Xjit:optlevel=cold---
+-------15.0.1.j9-adpt----7--- -Xjit:optlevel=warm---
+-------15.0.1.j9-adpt----7--- -Xjit:optlevel=hot---
+-------15.0.1.j9-adpt----7--- -Xjit:optlevel=veryhot---
+-------15.0.1.j9-adpt----7--- -Xjit:optlevel=scorching---
+-------15.0.1-open----7--- -XX:-TieredCompilation---
+-------15.0.1-open----7--- -XX:TieredStopAtLevel=0---
+-------15.0.1-open----7--- -XX:TieredStopAtLevel=1---
+-------15.0.1-open----7--- -XX:TieredStopAtLevel=2---
+-------15.0.1-open----7--- -XX:TieredStopAtLevel=3---
+-------15.0.1-open----7--- -XX:TieredStopAtLevel=4---
+-------15.0.1-open----7--- -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler---
+-------20.2.0.r11-grl----7--- -XX:+UseG1GC---
+-------20.2.0.r11-grl----7--- -XX:ParallelGCThreads=5---
+-------20.2.0.r11-grl----7--- -XX:ConcGCThreads=5---
+-------20.2.0.r11-grl----7--- -XX:ParallelGCThreads=1---
+-------20.2.0.r11-grl----7--- -XX:ConcGCThreads=1---
+-------20.2.0.r11-grl----7--- -XX:+DisableExplicitGC---
+-------20.2.0.r11-grl----7--- -XX:+UseParallelGC---
+-------20.2.0.r11-grl----7--- -XX:+UseParallelOldGC---
+-------20.2.0.r11-grl----7--- -XX:MaxGCPauseMillis=5000 -XX:GCTimeRatio=2---
+-------15.0.1.j9-adpt----7--- -Xgc:concurrentScavenge---
+-------15.0.1.j9-adpt----7--- -Xgc:scvNoAdaptiveTenure---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:balanced---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:gencon---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:metronome---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:nogc---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:optavgpause---
+-------15.0.1.j9-adpt----7--- -Xgcpolicy:optthruput---
+-------15.0.1-open----7--- -XX:+UseG1GC---
+-------15.0.1-open----7--- -XX:ParallelGCThreads=5---
+-------15.0.1-open----7--- -XX:ConcGCThreads=5---
+-------15.0.1-open----7--- -XX:ParallelGCThreads=1---
+-------15.0.1-open----7--- -XX:ConcGCThreads=1---
+-------15.0.1-open----7--- -XX:+DisableExplicitGC---
+-------15.0.1-open----7--- -XX:+UseParallelGC---
+-------15.0.1-open----7--- -XX:+UseParallelOldGC---
+OpenJDK 64-Bit Server VM warning: Ignoring option UseParallelOldGC; support was removed in 15.0
+-------15.0.1-open----7--- -XX:+UseSerialGC---
+-------15.0.1-open----7--- -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -XX:+AlwaysPreTouch---
+[0.494s][warning][gc,init] Consider setting -Xms equal to -Xmx to avoid resizing hiccups
+-------16.0.0.j9-adpt----8---deafult---
+-------16.0.0.hs-adpt----8---deafult---
+-------11.0.11.j9-adpt----8---deafult---
+-------11.0.11.hs-adpt----8---deafult---
+-------11.0.10.j9-adpt----8---deafult---
+^C-------11.0.10.hs-adpt----8---deafult---
+^C-------8.0.292.j9-adpt----8---deafult---
+^C

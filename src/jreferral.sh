@@ -1,21 +1,16 @@
 #! /bin/bash
 
-compile_cmd="numericalintegration.java"
-execute_cmd="NumericalIntegration"
-
-user="chakibmed"
-datafile="data_numericalintegration_chetemi_15_single.csv"
-logfile="exp_numericalintegration_chetemi_15_single.log"
-max_iterations=30
-sleep_duration=2
-
-opt_dec=0
-while getopts "u:d:l:n:" o >/dev/null 2>&1; do
+datafile="data.csv"
+logfile="exp.log"
+max_iterations=1
+sleep_duration=3
+tt=""
+while getopts "du:o:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
     u)
-        user=${OPTARG}
+        USERNAME=${OPTARG}
         ;;
-    d)
+    o)
         datafile=${OPTARG}
         ;;
     l)
@@ -24,26 +19,40 @@ while getopts "u:d:l:n:" o >/dev/null 2>&1; do
     n)
         max_iterations=${OPTARG}
         ;;
-    *)
-        opt_dec=$((opt_dec + 1))
+    s)
+        sleep_duration=${OPTARG}
         ;;
+    d)
+        details="True"
+        ;;
+
+    ?)
+        tt="True"
+        ;;
+
     esac
 done
-shift $((OPTIND - 1 + opt_dec))
+
+if [ -n "$tt" ]; then
+
+    shift $((OPTIND - 2))
+
+else
+    shift $((OPTIND - 1))
+
+fi
+
+USERNAME=${USERNAME:-$USER}
 
 curdir="$(dirname -- $(
     readlink -fn -- "$0"
     echo x
 ))"
+
 curdir="${curdir%x}"
 IFS=$'\n'                           # retrieve the whole line and ignore spaces
 jvms=$(grep -v "#" $curdir/jvms.sh) # get the available jvm configurations
 header=$($curdir/measureit.sh -l)   # get the avialable domaines
-
-compile() {
-    rm *.class
-    docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/javac -v$(pwd):/lab -w /lab $user/jvm:$tag $compile_cmd
-}
 
 measure() {
 
@@ -62,7 +71,7 @@ measure() {
     echo -------$tag----$iteration---$optionstag--- >>$logfile
     IFS=$' '
 
-    energies=$($curdir/measureit.sh -b -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $execute_cmd)
+    energies=$($curdir/measureit.sh -c -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $USERNAME/jvm:$tag $options $cmd)
     exitcode=$?
     IFS=$'\n'
     ## write the results in a data file
@@ -106,8 +115,15 @@ for i in $(seq 1 1 $max_iterations); do
         if [ -z $options ]; then
             options="default"
         fi
-        # compile $i $tag $options $cmd
         measure $i $tag $options $cmd
         sleep $sleep_duration
     done
 done
+
+if [ -n "$details" ]; then
+
+    python3 $curdir/recap.py -d $datafile
+else
+
+    python3 $curdir/recap.py $datafile
+fi

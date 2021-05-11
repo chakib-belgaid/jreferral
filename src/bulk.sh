@@ -3,11 +3,10 @@
 user="chakibmed"
 datafile="data.csv"
 logfile="exp.log"
-max_iterations=1
-sleep_duration=1
-s=""
+max_iterations=10
+sleep_duration=3
 opt_dec=0
-
+tt=""
 while getopts "du:o:l:n:" o >/dev/null 2>&1; do
     case "${o}" in
     u)
@@ -22,17 +21,31 @@ while getopts "du:o:l:n:" o >/dev/null 2>&1; do
     n)
         max_iterations=${OPTARG}
         ;;
+    s)
+        sleep_duration=${OPTARG}
+        ;;
     d)
         details="True"
         ;;
 
     ?)
-        opt_dec=$((opt_dec + 1))
+    ?)
+        tt="True"
         ;;
 
     esac
 done
-shift $((OPTIND - opt_dec + 1))
+
+if [ -n "$tt" ]; then
+
+    shift $((OPTIND - 2))
+
+else
+    shift $((OPTIND - 1))
+
+fi
+
+benchmarksfile=$1
 
 curdir="$(dirname -- $(
     readlink -fn -- "$0"
@@ -47,8 +60,9 @@ measure() {
 
     iteration=$1
     tag=$2
-    optionstag=$3
-    shift 3
+    benchname=$3
+    optionstag=$4
+    shift 4
     cmd=$@
     #handle the default option
     if [ $optionstag == "default" ]; then
@@ -60,12 +74,12 @@ measure() {
     echo -------$tag----$iteration---$optionstag--- >>$logfile
     IFS=$' '
 
-    energies=$($curdir/measureit.sh -b -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $cmd)
+    energies=$($curdir/measureit.sh -c -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $user/jvm:$tag $options $cmd)
     exitcode=$?
     IFS=$'\n'
     ## write the results in a data file
     numbers=$(parse_energies $energies)
-    echo $tag';'$optionstag';'$iteration';'$exitcode''$numbers >>$datafile
+    echo $benchname';'$tag';'$optionstag';'$iteration';'$exitcode''$numbers >>$datafile
 
 }
 
@@ -90,22 +104,29 @@ parse_energies() {
 }
 
 #intialisation of the log and data files
-echo "jvm;options;iteration;exitcode;"$header >$datafile
+echo "benchmark;jvm;options;iteration;exitcode;"$header >$datafile
 echo "" >$logfile
 
 #excuting the cmd
 
-cmd=$@
 for i in $(seq 1 1 $max_iterations); do
-    for line in ${jvms[@]}; do
-        echo $line
-        tag=$(echo $line | awk -F ' ' '{print $1'})
-        options=$(echo $line | awk -F ' ' '{for (i=2; i <= NF; i++) printf " "$i ;}')
-        if [ -z $options ]; then
-            options="default"
-        fi
-        measure $i $tag $options $cmd
-        sleep $sleep_duration
+    for benchmark in $(grep -v "#" $benchmarksfile); do
+
+        for line in ${jvms[@]}; do
+            IFS=$' '
+            benchname=$(echo $benchmark | cut -d " " -f3)
+            IFS=$'\n'
+
+            echo $line -- $benchname -- $i
+
+            tag=$(echo $line | awk -F ' ' '{print $1'})
+            options=$(echo $line | awk -F ' ' '{for (i=2; i <= NF; i++) printf " "$i ;}')
+            if [ -z $options ]; then
+                options="default"
+            fi
+            measure $i $tag $benchname $options $benchmark
+            sleep $sleep_duration
+        done
     done
 done
 

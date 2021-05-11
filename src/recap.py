@@ -48,7 +48,7 @@ def get_recap_details(x):
     recap["duration"]=recap["duration"]/1000000
     recap["CPU"]=recap["CPU"]/1000000
     recap["DRAM"]=recap["DRAM"]/1000000
-    recap.columns=["Execution Time (s)","Energy CPU (J)","Energy DRAM(J)", "JVM","Execution Flags"]
+    recap.columns=["Execution Time (s)","Energy CPU (J)","Energy DRAM (J)", "JVM","Execution Flags"]
     recap=recap.fillna('')
     return recap
 

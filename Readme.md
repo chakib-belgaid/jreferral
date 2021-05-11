@@ -1,5 +1,5 @@
 # JVM-Recommander  
-A tool that run your java program through multiple versions of JVMs and optimisation options to rcommend the most energry efficiant configuration 
+A tool that run your java program through multiple versions of JVMs and optimisation options to recommand the most energry efficiant configuration.  
 
 ## Requirements 
 - **Docker** : we use a docker image for testing and isolating the JVM 
@@ -9,24 +9,52 @@ A tool that run your java program through multiple versions of JVMs and optimisa
 
 ## How to use 
 
-1. Choose your options in th file `jvms.sh` 
-    - uncomment what should be included during the tests
-2. run `build-images.sh` that will build the docker images for respective jvms 
-3. replace the word **java** with **./test.sh** in your command 
-    - example 
+1. Choose The configurations to be tested  in th file [jvms.sh](./src/jvms.sh) 
+    - Uncomment what should be included during the tests
+
+2. Run [build-images.sh](./src/buildi-images.sh) that will build the docker images for respective jvms 
+    - You can add the option **-u** to setup the  username for docker images 
+    - The images will have the format***username/jvm:version**
+3. Replace the word **java** with **src/jrecommand.sh** in your command 
+    - Example 
         ``` 
         java -jar example.jar arg1 arg2 ...
         will be 
-        ./test.sh -jar example.jar arg1 arg2 ...
+        ./jrecommand.sh -jar example.jar arg1 arg2 ...
         ```
 
+You will find the results in `data.csv` and the execution log in `exp.log`
 
-you will find the results in `data.csv` and the execution log in `exp.log`
+## Bulk Benchmarking 
 
-# TODO 
-- [ ] add the python script that print the choice 
-- [x] Change the extension of jvms.sh 
-- [x] Custumize the username
-- [x] Custiomize the data filename and logs filename 
-- [x] Loops inside the testing 
-- [ ] add the options in the descprition 
+If you want to test multiple benchmarks you can use [bulk.sh](./src/bulk.sh), to do So
+
+1. Put your benchmarks in a file as an exmple `example_bulks.sh` 
+
+2. Run the script [bulk.sh](./src/bulk.sh) giving him as entry the path of your *bulks_file*
+    - Example
+        ``` 
+        ./src/bulk.sh example_bulks.sh
+        ```
+## Flags and options 
+
+- For both `jreferral.sh` and `bulk.sh`
+
+|**Flag**|**Description**|**Default value**|
+|--------|---------------|:---------------:|
+| -u *name* | The username of docker images | user |
+| -o *filename* | The filename where the all the measures should be put in | data.csv|
+| -l *filename* | Redirection of the output of the tests | exp.log |
+| -n *Number* | The number of iterations that should be run for each configuration | 1 | 
+| -s *Duration* | Time to wait between two consecutive tests (in order to avoid the test impacting each others ) | 3s | sec|
+| -d | print the *DRAM* energy and *CPU* energy seperately | False | 
+
+
+## Example
+
+this is an example to test the energy consumption of [zip4j](https://github.com/srikanth-lingala/zip4j)
+
+![zip4j](https://github.com/chakib-belgaid/jreferral/imgs/zip4j.png?raw=true)
+
+and for the detailed version (aka -d)
+![zip4j detailed ](https://github.com/chakib-belgaid/jreferral/imgs/zip4jdetailed.png?raw=true)
