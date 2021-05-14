@@ -28,7 +28,9 @@ while getopts "du:o:l:n:" o >/dev/null 2>&1; do
         details="True"
         ;;
 
-    ?)
+    p)
+        plots="True"
+        ;;
     ?)
         tt="True"
         ;;
@@ -130,10 +132,18 @@ for i in $(seq 1 1 $max_iterations); do
     done
 done
 
+recapARGS=()
+
 if [ -n "$details" ]; then
 
-    python3 $curdir/recap.py -d -b $datafile
-else
-
-    python3 $curdir/recap.py $datafile
+    recapARGS+=("-d")
 fi
+
+if [ -n "$plots" ]; then
+
+    recapARGS+=("-p")
+fi
+
+recapARGS+=($datafile)
+echo ${recapARGS[@]}
+python3 $curdir/recap.py ${recapARGS[@]}

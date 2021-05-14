@@ -5,7 +5,7 @@ logfile="exp.log"
 max_iterations=1
 sleep_duration=3
 tt=""
-while getopts "du:o:l:n:" o >/dev/null 2>&1; do
+while getopts "du:o:l:n:p" o >/dev/null 2>&1; do
     case "${o}" in
     u)
         USERNAME=${OPTARG}
@@ -26,6 +26,9 @@ while getopts "du:o:l:n:" o >/dev/null 2>&1; do
         details="True"
         ;;
 
+    p)
+        plots="True"
+        ;;
     ?)
         tt="True"
         ;;
@@ -120,10 +123,18 @@ for i in $(seq 1 1 $max_iterations); do
     done
 done
 
+recapARGS=()
+
 if [ -n "$details" ]; then
 
-    python3 $curdir/recap.py -d $datafile
-else
-
-    python3 $curdir/recap.py $datafile
+    recapARGS+=("-d")
 fi
+
+if [ -n "$plots" ]; then
+
+    recapARGS+=("-p")
+fi
+
+recapARGS+=($datafile)
+echo ${recapARGS[@]}
+python3 $curdir/recap.py ${recapARGS[@]}
