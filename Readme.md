@@ -93,7 +93,7 @@ Energy consumption of  **DRAM**
 ![zip4j](https://github.com/chakib-belgaid/jreferral/blob/master/imgs/zip4j_1_DRAM.png?raw=true)
 
 
-Energy consumption of  **Execution of Time** 
+**Execution of Time** 
 
 ![zip4j](https://github.com/chakib-belgaid/jreferral/blob/master/imgs/zip4j_1_duration.png?raw=true)
 
