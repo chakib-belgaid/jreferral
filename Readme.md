@@ -1,4 +1,4 @@
-# JVM-Recommander  
+# JReferral  
 A tool that run your java program through multiple versions of JVMs and optimisation options to recommand the most energry efficiant configuration.  
 
 ## Requirements 
