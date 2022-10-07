@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Belgaid
+    given-names: Mohammed chakib
+  - family-names: Ournani
+    given-names: Zakaria
+  - family-names: Rouvoy
+    given-names: Romain
+  - family-names: Seinturier
+    given-names: Lionel
+title: "JRefferal: Which JVM suits your project ?"
+version: 1.0.2
+date-released: 2021-07-10
