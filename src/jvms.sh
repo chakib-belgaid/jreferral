@@ -1,94 +1,117 @@
-# 16.0.0.j9-adpt
-# 16.0.0.hs-adpt
-# 11.0.11.j9-adpt
-# 11.0.11.hs-adpt
-# 11.0.10.j9-adpt
-# 11.0.10.hs-adpt
-# 8.0.292.j9-adpt
-# 8.0.292.hs-adpt
-# 8.0.282.j9-adpt
-# 8.0.282.hs-adpt
-
-# 11.0.9.4-albba
-# 8.5.5-albba
-
-# 16.0.1.9.1-amzn
-# 16.0.0.36.1-amzn
-# 15.0.2.7.1-amzn
-# 11.0.11.9.1-amzn
-# 11.0.10.9.1-amzn
-# 8.292.10.1-amzn
-# 8.282.08.1-amzn
-
-# 16.0.0-zulu
-# 16.0.0.fx-zulu
-# 15.0.2.fx-zulu
-# 11.0.11-zulu
-# 11.0.10-zulu
-# 11.0.10.fx-zulu
-# 8.0.292-zulu
-# 8.0.282-zulu
-# 8.0.282.fx-zulu
-# 7.0.302-zulu
-# 7.0.292-zulu
+20.0.2-amzn
+# 20.0.1-amzn
+# 17.0.8-amzn
+# 17.0.7-amzn
+# 11.0.20-amzn
+# 11.0.19-amzn
+# 8.0.382-amzn
+# 8.0.372-amzn
+17.0.7-albba
+# 11.0.19-albba
+# 8.0.372-albba
+# 8.0.275-albba
+22.1.0.1.r17-gln
+# 22.1.0.1.r11-gln
+# 20.0.2-graalce
+# 20.0.1-graalce
+# 17.0.8-graalce
+# 17.0.7-graalce
+# 20.0.2-graal
+# 20.0.1-graal
+# 17.0.8-graal
+# 17.0.7-graal
+# 22.ea.7-open
+# 22.ea.6-open
+# 22.ea.5-open
+# 22.ea.4-open
+# 22.ea.3-open
+# 21.ea.32-open
+# 21.ea.31-open
+# 21.ea.30-open
+# 21.ea.29-open
+# 21.ea.28-open
+20.0.2-open
+# 19.ea.1.pma-open
+15.0.1-open
+# 17.0.7-jbr
+# 11.0.14.1-jbr
+# 20.0.2.fx-librca
+20.0.2-librca
+# 20.0.1.fx-librca
+# 20.0.1-librca
+# 17.0.8.fx-librca
+# 17.0.8-librca
+# 17.0.7.fx-librca
+# 17.0.7-librca
+# 11.0.20.fx-librca
+# 11.0.20-librca
+# 11.0.19.fx-librca
+# 11.0.19-librca
+# 8.0.382.fx-librca
+# 8.0.382-librca
+# 8.0.372.fx-librca
+# 8.0.372-librca
+23.r20-nik
+# 23.r17-nik
+# 22.3.2.r17-nik
+# 22.3.2.r11-nik
+23.r20-mandrel
+# 23.r17-mandrel
+# 22.3.2.1.r17-mandrel
+# 17.0.8-ms
+# 17.0.7-ms
+# 11.0.20-ms
+# 11.0.19-ms
+20.0.2-oracle
+# 20.0.1-oracle
+# 17.0.8-oracle
+# 17.0.7-oracle
+20.0.2-sapmchn
+# 20.0.1-sapmchn
+# 17.0.8-sapmchn
+# 17.0.7-sapmchn
+# 11.0.20-sapmchn
+# 11.0.19-sapmchn
+20.0.1-sem
+# 17.0.7-sem
+# 11.0.19-sem
+# 8.0.372-sem
+# 20.0.2-tem
+# 20.0.1-tem
+# 17.0.8-tem
+# 17.0.7-tem
+# 11.0.20-tem
+# 11.0.19-tem
+# 8.0.382-tem
+# 8.0.372-tem
+17.0.8-kona
+# 17.0.7-kona
+# 11.0.20-kona
+# 11.0.19-kona
+# 8.0.382-kona
+# 8.0.372-kona
+# 11.0.15-trava
+# 8.0.282-trava
+# 20.0.2-zulu
+20.0.2.fx-zulu
+# 20.0.1-zulu
+# 20.0.1.fx-zulu
+# 17.0.8-zulu
+# 17.0.8.crac-zulu
+17.0.8.fx-zulu
+# 17.0.7-zulu
+# 17.0.7.crac-zulu
+# 17.0.7.fx-zulu
+# 11.0.20-zulu
+# 11.0.20.fx-zulu
+# 11.0.19-zulu
+# 11.0.19.fx-zulu
+# 8.0.382-zulu
+# 8.0.382.fx-zulu
+# 8.0.372-zulu
+# 8.0.372.fx-zulu
+# 7.0.352-zulu
 # 6.0.119-zulu
-
-# 16.0.1.fx-librca
-# 16.0.1-librca
-# 16.0.0.fx-librca
-# 16.0.0-librca
-# 11.0.11.fx-librca
-# 11.0.11-librca
-# 11.0.10.fx-librca
-# 11.0.10-librca
-# 8.0.292.fx-librca
-# 8.0.292-librca
-# 8.0.282.fx-librca
-# 8.0.282-librca
-
-# 21.1.0.r16-grl
-# 21.1.0.r11-grl
-# 21.1.0.r8-grl
-# 21.0.0.2.r11-grl
-# 21.0.0.2.r8-grl
-# 20.3.2.r11-grl
-# 20.3.2.r8-grl
-# 20.3.1.2.r11-grl
-# 20.3.1.2.r8-grl
-# 19.3.6.r11-grl
-# 19.3.6.r8-grl
-# 19.3.5.r11-grl
-# 19.3.5.r8-grl
-
-# 17.ea.19-open
-# 17.ea.6.lm-open
-# 17.ea.2.pma-open
-
-# 16-open
-# 16.0.1-open
-# 11.0.10-open
-# 15.0.2-open
-# 14.0.2-open
-# 13.0.2-open
-# 12.0.2-open
-# 11.0.11-open
-# 11.0.2-open
-# 10.0.2-open
-# 9.0.4-open
-# 8.0.292-open
-# 8.0.282-open
-# 8.0.265-open
-# 21.0.0.0-mandrel
-# 20.3.1.2-mandrel
-# 11.0.11.9.1-ms
-# 11.0.10.9-ms
-# 16-sapmchn
-# 16.0.1-sapmchn
-# 15.0.2-sapmchn
-# 11.0.11-sapmchn
-# 11.0.10-sapmchn
-# 11.0.9-trava
-# 8.0.232-trava
 
 # ### JIT
 # 20.2.0.r11-grl
