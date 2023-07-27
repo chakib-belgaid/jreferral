@@ -115,7 +115,7 @@
 # 15.0.1-open -XX:TieredStopAtLevel=0
 # 15.0.1-open -XX:TieredStopAtLevel=1
 15.0.1-open -XX:TieredStopAtLevel=2
-15.0.1-open -XX:TieredStopAtLevel=3
+# 15.0.1-open -XX:TieredStopAtLevel=3
 # 15.0.1-open -XX:TieredStopAtLevel=4
 # 15.0.1-open -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler
 

@@ -74,7 +74,7 @@ measure() {
     echo -------$tag----$iteration---$optionstag--- >>$logfile
     IFS=$' '
 
-    energies=$($curdir/measureit.sh -c -o $logfile docker run --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $USERNAME/jvm:$tag $options $cmd)
+    energies=$(sudo $curdir/measureit.sh -c -o $logfile docker run --privileged --rm -it --entrypoint=/root/.sdkman/candidates/java/current/bin/java -v$(pwd):/lab -w /lab $USERNAME/jvm:$tag $options $cmd)
     exitcode=$?
     IFS=$'\n'
     ## write the results in a data file

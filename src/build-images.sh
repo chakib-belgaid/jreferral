@@ -8,7 +8,7 @@ while getopts "u:" o >/dev/null 2>&1; do
     esac
 done
 
-export -x USERNAME=${USERNAME:-$USER}
+export USERNAME=${USERNAME:-$USER}
 
 curdir="$(dirname -- $(
     readlink -fn -- "$0"

@@ -3,3 +3,7 @@ src/dacapo.jar
 exps/*
 data/*
 .vscode
+venv/*
+src/data.csv
+src/exp.log
+src/renaissance-gpl-0.14.2.jar
