@@ -25,6 +25,9 @@ A tool that run your java program through multiple versions of JVMs and optimisa
 
 You will find the results in `data.csv` and the execution log in `exp.log`
 
+### Note: 
+Due to security reasons, you need sudo access in order to measure the energy  
+
 ## Bulk Benchmarking 
 
 If you want to test multiple benchmarks you can use [bulk.sh](./src/bulk.sh), to do So
